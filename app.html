@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Todo Manager</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header Section -->
+      <header class="app-header">
+        <div class="user-info">
+          <img id="userAvatar" src="" alt="User Avatar" class="avatar" />
+          <span id="userName">User Name</span>
+        </div>
+        <button id="signOutBtn" class="sign-out-btn">Sign Out</button>
+      </header>
+
+      <!-- Task Input Section -->
+      <section class="task-input-section">
+        <div class="input-container">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Add a new task..."
+            maxlength="100"
+          />
+          <button id="addTaskBtn">Add Task</button>
+        </div>
+        <span class="error-message" id="taskError"></span>
+      </section>
+
+      <!-- Task Stages Section -->
+      <main class="task-stages">
+        <!-- Todo Stage -->
+        <div class="stage" id="todoStage">
+          <div class="stage-header">
+            <h2>Todo</h2>
+            <span class="task-count" id="todoCount">0</span>
+          </div>
+          <div class="task-list" id="todoList"></div>
+        </div>
+
+        <!-- Completed Stage -->
+        <div class="stage" id="completedStage">
+          <div class="stage-header">
+            <h2>Completed</h2>
+            <span class="task-count" id="completedCount">0</span>
+          </div>
+          <div class="task-list" id="completedList"></div>
+        </div>
+
+        <!-- Archived Stage -->
+        <div class="stage" id="archivedStage">
+          <div class="stage-header">
+            <h2>Archived</h2>
+            <span class="task-count" id="archivedCount">0</span>
+          </div>
+          <div class="task-list" id="archivedList"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
